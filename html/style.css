@@ -1,0 +1,477 @@
+@charset "UTF-8";
+@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
+@import url("//fonts.googleapis.com/css?family=Comfortaa");
+:root {
+  --user-button-circle: rgba(0,0,0,0.025);
+  --user-button-cardborder: rgba(255,255,255,0.25);
+  --user-button-text:#323133;
+  --user-button-shadow:rgba(0,0,0,0.1);
+}
+body #user-button {
+  z-index: 1000;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  color: var(--user-button-text);
+  transition: 1s 0s ease-out;
+  -webkit-animation: slide 3s ease-out forwards;
+          animation: slide 3s ease-out forwards;
+}
+@-webkit-keyframes slide {
+  0%, 50% {
+    opacity: 0;
+    display: block !important;
+  }
+  100% {
+    opacity: 1;
+    display: block !important;
+  }
+}
+@keyframes slide {
+  0%, 50% {
+    opacity: 0;
+    display: block !important;
+  }
+  100% {
+    opacity: 1;
+    display: block !important;
+  }
+}
+body #user-button .u-card {
+  border-radius: 100%;
+  box-shadow: 0 0 1rem -0.25rem var(--user-button-shadow), inset 0 0 1rem -0.75rem var(--user-button-shadow);
+}
+body #user-button .u-main {
+  cursor: pointer;
+  --user-button-background:var(--user-button-main, #EC87C0);
+}
+body #user-button .u-main img {
+  height: 100%;
+  width: 100%;
+}
+body #user-button .u-main iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  opacity: 1;
+  transition: 0s 4s;
+}
+body #user-button .u-icons {
+  position: relative;
+  z-index: 950;
+  transform: translate(-50%, -50%);
+  background: var(--user-button-circle);
+  box-shadow: 0 0 0 0.125rem var(--user-button-cardborder);
+  border-radius: 100%;
+  transition: 0.25s;
+  opacity: 1 !important;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  /*&:before {
+     z-index:-1;
+     position:absolute;
+     top:0; right:0; bottom:0; left:0;
+     content:'';
+
+     backdrop-filter: blur(10px);
+  }*/
+}
+body #user-button .u-icons a {
+  color: inherit;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+}
+body #user-button .u-icons a div {
+  padding: 0.5rem;
+  transition: 0s;
+}
+body #user-button .u-icons a[href="https://twitter.com/Osorpenke"] {
+  position: relative;
+}
+body #user-button .u-icons a[href="https://twitter.com/Osorpenke"]:before {
+  content: "Middle Click";
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  white-space: pre;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease-in;
+  background: #fffc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+body #user-button .u-icons a[href="https://twitter.com/Osorpenke"].show:before {
+  opacity: 1;
+  transition: 0.25s ease-out;
+}
+body #user-button .u-icons a[href="https://twitter.com/Osorpenke"] div {
+  color: #1da1f2;
+}
+body #user-button .u-icons a[href="https://codepen.io/z-"] div {
+  background: black;
+  color: white;
+}
+body #user-button .u-icons a.u-random div {
+  position: relative;
+  top: -1px;
+  -webkit-animation: diespin 2s linear infinite;
+          animation: diespin 2s linear infinite;
+}
+@-webkit-keyframes diespin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes diespin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body #user-button .u-icons a.u-random:not(:hover) div {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+body #user-button .u-icons > * {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--singlecolour);
+  border-radius: 100%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: 0.25s -0.05s;
+}
+body #user-button .u-icons > *:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #user-button .u-icons > *:hover, body #user-button .u-icons > *:focus-within {
+  background: var(--hcolour);
+}
+body #user-button .u-icons > *:first-child:nth-last-child(1):nth-child(1), body #user-button .u-icons > *:first-child:nth-last-child(1) ~ *:nth-child(1) {
+  left: 25%;
+  top: 25%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(2):nth-child(1), body #user-button .u-icons > *:first-child:nth-last-child(2) ~ *:nth-child(1) {
+  left: 37.5%;
+  top: 18.75%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(2):nth-child(2), body #user-button .u-icons > *:first-child:nth-last-child(2) ~ *:nth-child(2) {
+  left: 18.75%;
+  top: 37.5%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(3):nth-child(1), body #user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(1) {
+  left: 50%;
+  top: 15.625%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(3):nth-child(2), body #user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(2) {
+  left: 25%;
+  top: 25%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(3):nth-child(3), body #user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(3) {
+  left: 15.625%;
+  top: 50%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(1), body #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(1) {
+  left: 62.5%;
+  top: 18.75%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(2), body #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(2) {
+  left: 37.5%;
+  top: 18.75%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(3), body #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(3) {
+  left: 18.75%;
+  top: 37.5%;
+}
+body #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(4), body #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(4) {
+  left: 18.75%;
+  top: 62.5%;
+}
+body #user-button:hover .u-icons, body #user-button:focus-within .u-icons {
+  width: 300% !important;
+  height: 300% !important;
+}
+
+body {
+  --grid-size: 10vmin;
+  --grid-gap: 2vmin;
+  --background: 255, 255, 255;
+  --tile-background: #aab2bd;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: Comfortaa, sans-serif;
+  transition: 0.25s -0.1s;
+  overflow: hidden;
+}
+body.dark {
+  --background: 60, 60, 60;
+  --tile-background: #232223;
+}
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --background: 60, 60, 60;
+    --tile-background: #232223;
+  }
+}
+.board .overlay {
+    z-index: 20;
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    place-items: center;
+    background: rgba(var(--background), 0.4);
+    border-radius: 20px;
+}
+body .overlay .message {
+    position: absolute;
+    top: 46%;
+    left: 28%;
+  font-size: 3vmin;
+}
+body .board .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .overlay,
+body .board .TicTacToe.player-1.c-3.checked ~ .TicTacToe.player-1.c-3.checked ~ .TicTacToe.player-1.c-3.checked ~ .overlay,
+body .board .TicTacToe.player-1.r-3.checked ~ .TicTacToe.player-1.r-3.checked ~ .TicTacToe.player-1.r-3.checked ~ .overlay,
+body .board .TicTacToe.player-1.d-3.checked ~ .TicTacToe.player-1.d-3.checked ~ .TicTacToe.player-1.d-3.checked ~ .overlay,
+body .board .TicTacToe.player-1.c-2.checked ~ .TicTacToe.player-1.c-2.checked ~ .TicTacToe.player-1.c-2.checked ~ .overlay,
+body .board .TicTacToe.player-1.r-2.checked ~ .TicTacToe.player-1.r-2.checked ~ .TicTacToe.player-1.r-2.checked ~ .overlay,
+body .board .TicTacToe.player-1.d-2.checked ~ .TicTacToe.player-1.d-2.checked ~ .TicTacToe.player-1.d-2.checked ~ .overlay,
+body .board .TicTacToe.player-1.c-1.checked ~ .TicTacToe.player-1.c-1.checked ~ .TicTacToe.player-1.c-1.checked ~ .overlay,
+body .board .TicTacToe.player-1.r-1.checked ~ .TicTacToe.player-1.r-1.checked ~ .TicTacToe.player-1.r-1.checked ~ .overlay,
+body .board .TicTacToe.player-1.d-1.checked ~ .TicTacToe.player-1.d-1.checked ~ .TicTacToe.player-1.d-1.checked ~ .overlay,
+body .board .TicTacToe.player-2.c-3.checked ~ .TicTacToe.player-2.c-3.checked ~ .TicTacToe.player-2.c-3.checked ~ .overlay,
+body .board .TicTacToe.player-2.r-3.checked ~ .TicTacToe.player-2.r-3.checked ~ .TicTacToe.player-2.r-3.checked ~ .overlay,
+body .board .TicTacToe.player-2.d-3.checked ~ .TicTacToe.player-2.d-3.checked ~ .TicTacToe.player-2.d-3.checked ~ .overlay,
+body .board .TicTacToe.player-2.c-2.checked ~ .TicTacToe.player-2.c-2.checked ~ .TicTacToe.player-2.c-2.checked ~ .overlay,
+body .board .TicTacToe.player-2.r-2.checked ~ .TicTacToe.player-2.r-2.checked ~ .TicTacToe.player-2.r-2.checked ~ .overlay,
+body .board .TicTacToe.player-2.d-2.checked ~ .TicTacToe.player-2.d-2.checked ~ .TicTacToe.player-2.d-2.checked ~ .overlay,
+body .board .TicTacToe.player-2.c-1.checked ~ .TicTacToe.player-2.c-1.checked ~ .TicTacToe.player-2.c-1.checked ~ .overlay,
+body .board .TicTacToe.player-2.r-1.checked ~ .TicTacToe.player-2.r-1.checked ~ .TicTacToe.player-2.r-1.checked ~ .overlay,
+body .board .TicTacToe.player-2.d-1.checked ~ .TicTacToe.player-2.d-1.checked ~ .TicTacToe.player-2.d-1.checked ~ .overlay {
+  display: grid;
+  -webkit-animation: fade-in 0.5s;
+          animation: fade-in 0.5s;
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body .board .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .TicTacToe.checked ~ .overlay .message:before {
+  content: "It's a tie!";
+}
+body .board .TicTacToe.player-1.c-3.checked ~ .TicTacToe.player-1.c-3.checked ~ .TicTacToe.player-1.c-3.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.r-3.checked ~ .TicTacToe.player-1.r-3.checked ~ .TicTacToe.player-1.r-3.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.d-3.checked ~ .TicTacToe.player-1.d-3.checked ~ .TicTacToe.player-1.d-3.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.c-2.checked ~ .TicTacToe.player-1.c-2.checked ~ .TicTacToe.player-1.c-2.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.r-2.checked ~ .TicTacToe.player-1.r-2.checked ~ .TicTacToe.player-1.r-2.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.d-2.checked ~ .TicTacToe.player-1.d-2.checked ~ .TicTacToe.player-1.d-2.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.c-1.checked ~ .TicTacToe.player-1.c-1.checked ~ .TicTacToe.player-1.c-1.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.r-1.checked ~ .TicTacToe.player-1.r-1.checked ~ .TicTacToe.player-1.r-1.checked ~ .overlay .message:before, body .board .TicTacToe.player-1.d-1.checked ~ .TicTacToe.player-1.d-1.checked ~ .TicTacToe.player-1.d-1.checked ~ .overlay .message:before {
+  content: "Player 1 wins!" !important;
+}
+body .board .TicTacToe.player-2.c-3.checked ~ .TicTacToe.player-2.c-3.checked ~ .TicTacToe.player-2.c-3.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.r-3.checked ~ .TicTacToe.player-2.r-3.checked ~ .TicTacToe.player-2.r-3.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.d-3.checked ~ .TicTacToe.player-2.d-3.checked ~ .TicTacToe.player-2.d-3.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.c-2.checked ~ .TicTacToe.player-2.c-2.checked ~ .TicTacToe.player-2.c-2.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.r-2.checked ~ .TicTacToe.player-2.r-2.checked ~ .TicTacToe.player-2.r-2.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.d-2.checked ~ .TicTacToe.player-2.d-2.checked ~ .TicTacToe.player-2.d-2.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.c-1.checked ~ .TicTacToe.player-2.c-1.checked ~ .TicTacToe.player-2.c-1.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.r-1.checked ~ .TicTacToe.player-2.r-1.checked ~ .TicTacToe.player-2.r-1.checked ~ .overlay .message:before, body .board .TicTacToe.player-2.d-1.checked ~ .TicTacToe.player-2.d-1.checked ~ .TicTacToe.player-2.d-1.checked ~ .overlay .message:before {
+  content: "Player 2 wins!" !important;
+}
+body .board {
+  position: absolute;
+  left: 1%;
+  top: 34%;
+  display: grid;
+  grid-template-columns: repeat(3, var(--grid-size));
+  grid-template-rows: repeat(3, var(--grid-size));
+  grid-template-areas: "_1 _2 _3" "_4 _5 _6" "_7 _8 _9";
+  grid-gap: var(--grid-gap);
+  place-items: center;
+  padding: 20px;
+  padding-top: 50px;
+  border-radius: 20px;
+  background: rgb(var(--background));
+}
+body .header {
+    position: absolute;
+    left: 32%;
+    top: 5%;
+    z-index: 21;
+    color: white;
+}
+.x-mark {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #da4453;
+    border-radius: 50%;
+    position: absolute;
+    right: -100%;
+    top: -50%;
+    box-shadow: none;
+    transition: .2s ease-out;
+}
+.x-mark:before {
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 10px;
+    font-family: "Font Awesome 5 Pro" !important;
+    content: "";
+    transition: .2s ease-out;
+}
+.x-mark:hover {
+    box-shadow: 24px 27px 31px -18px rgba(0,0,0,0.75);
+    transform: scale(1.1);
+}
+.x-mark:hover.x-mark:before {
+    transform: scale(1.2);
+}
+body .header .OtherPlayer {
+    font-weight: bold;
+}
+
+body .board .TicTacToe {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  border: 0.25vmin solid var(--background);
+  background: var(--tile-background);
+  color: white;
+  outline: none;
+  transition: .2s ease-out;
+  font-family: "Font Awesome 5 Pro";
+}
+body .board .TicTacToe:not(.turn-1) {
+  display: none;
+}
+body .board .TicTacToe:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  opacity: 0;
+}
+body .board .TicTacToe.checked {
+  z-index: 10;
+}
+body .board .TicTacToe:not(.checked):hover {
+  cursor: pointer;
+}
+body .board .TicTacToe:not(.checked):hover:before, body .board .TicTacToe.checked:before {
+  opacity: 1;
+}
+body .board .TicTacToe.player-1:hover {
+  background: #4a89dc93;
+}
+body .board .TicTacToe.player-1.checked {
+  background: #5d9cec;
+}
+body .board .TicTacToe.player-1:before {
+  content: "";
+  font-size: calc(var(--grid-size) / 1.5);
+}
+body .board .TicTacToe.player-2:hover {
+  background: #da445383;
+}
+body .board .TicTacToe.player-2.checked {
+  background: #ed5565;
+}
+body .board .TicTacToe.player-2:before {
+  content: "";
+  font-size: calc(var(--grid-size) / 2);
+}
+body .board .TicTacToe:nth-child(9n+1) {
+  grid-area: _9;
+}
+body .board .TicTacToe:nth-child(9n+2) {
+  grid-area: _1;
+}
+body .board .TicTacToe:nth-child(9n+3) {
+  grid-area: _2;
+}
+body .board .TicTacToe:nth-child(9n+4) {
+  grid-area: _3;
+}
+body .board .TicTacToe:nth-child(9n+5) {
+  grid-area: _4;
+}
+body .board .TicTacToe:nth-child(9n+6) {
+  grid-area: _5;
+}
+body .board .TicTacToe:nth-child(9n+7) {
+  grid-area: _6;
+}
+body .board .TicTacToe:nth-child(9n+8) {
+  grid-area: _7;
+}
+body .board .TicTacToe:nth-child(9n+9) {
+  grid-area: _8;
+}
+body .board .TicTacToe.turn-1.checked ~ .turn-2 {
+  display: block;
+}
+body .board .TicTacToe.turn-2.checked ~ .turn-3 {
+  display: block;
+}
+body .board .TicTacToe.turn-3.checked ~ .turn-4 {
+  display: block;
+}
+body .board .TicTacToe.turn-4.checked ~ .turn-5 {
+  display: block;
+}
+body .board .TicTacToe.turn-5.checked ~ .turn-6 {
+  display: block;
+}
+body .board .TicTacToe.turn-6.checked ~ .turn-7 {
+  display: block;
+}
+body .board .TicTacToe.turn-7.checked ~ .turn-8 {
+  display: block;
+}
+body .board .TicTacToe.turn-8.checked ~ .turn-9 {
+  display: block;
+}
+
+
+.me-NOT .TicTacToe {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
